@@ -14,6 +14,17 @@
 
 
 
+  
+  
+    
+      
+    
+    
+      
+    
+  <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+  <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-flash.min.css" rel="stylesheet">
+
 
 
 
@@ -85,17 +96,17 @@
 
 
 
-<meta name="description" content="个人站，主要用于分享自己在前端所学，涉及涉及，进阶，优化，工具">
+<meta name="description" content="个人站，分享前端所学，涉及设计，进阶，优化，工具">
 <meta property="og:type" content="website">
 <meta property="og:title" content="分类">
 <meta property="og:url" content="http://yoursite.com/categories/index.html">
 <meta property="og:site_name" content="Endless Dreams">
-<meta property="og:description" content="个人站，主要用于分享自己在前端所学，涉及涉及，进阶，优化，工具">
+<meta property="og:description" content="个人站，分享前端所学，涉及设计，进阶，优化，工具">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-10-29T07:26:17.487Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="分类">
-<meta name="twitter:description" content="个人站，主要用于分享自己在前端所学，涉及涉及，进阶，优化，工具">
+<meta name="twitter:description" content="个人站，分享前端所学，涉及设计，进阶，优化，工具">
 
 
 
@@ -320,7 +331,7 @@
                 目前共计 1 个分类
             </div>
             <div class="category-all">
-              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">1</span></li></ul>
+              <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">2</span></li></ul>
             </div>
           </div>
         
@@ -377,7 +388,7 @@
               <img class="site-author-image" itemprop="image" src="/images/avatar.jpg" alt="Endless Dreams">
             
               <p class="site-author-name" itemprop="name">Endless Dreams</p>
-              <p class="site-description motion-element" itemprop="description">个人站，主要用于分享自己在前端所学，涉及涉及，进阶，优化，工具</p>
+              <p class="site-description motion-element" itemprop="description">个人站，分享前端所学，涉及设计，进阶，优化，工具</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -387,7 +398,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -510,8 +521,18 @@
   <span class="author" itemprop="copyrightHolder">Endless Dreams</span>
 
   
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+      <span class="post-meta-item-text">Site words total count&#58;</span>
+    
+    <span title="Site words total count">87</span>
+  
 </div>
 
+<!--
 
   <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
 
@@ -523,10 +544,31 @@
 
   <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
 
+-->
 
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>访客数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
 
 
 
@@ -672,6 +714,7 @@
         e.parentNode.insertBefore(j, e);
       })(document, 'script');
     </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
   
 
 
@@ -1011,10 +1054,117 @@
   
 
   
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("6JMpODGV8PyYXkfVT0QCmR1u-gzGzoHsz", "cmEt6dEshAUFl9psscebHgP1");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
 
   
 
   
+
+  
   
 
   
@@ -1023,5 +1173,5 @@
 
   
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
 </html>

@@ -11,6 +11,7 @@
         e.parentNode.insertBefore(j, e);
       })(document, 'script');
     </script>
+    <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
   {% endif %}
 
 {% endif %}
