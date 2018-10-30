@@ -404,9 +404,7 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-livere:
-  enable: true
-  livere_uid: MTAyMC80MDYyOC8xNzE1NQ==
+livere_uid: MTAyMC80MDYyOC8xNzE1NQ==
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
