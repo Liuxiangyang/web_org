@@ -252,8 +252,8 @@ post_wordcount:
 
 # Reward
 #reward_comment: Donate comment here
-wechatpay: /images/wechatpay.jpg
-alipay: /images/alipay.jpg
+wechatpay: /images/wechatpay.JPG
+alipay: /images/alipay.JPG
 #bitcoin: /images/bitcoin.png
 
 # Declare license on posts
@@ -704,13 +704,13 @@ pace: true
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: true
+canvas_nest: false
 
 # three_waves
 three_waves: false
 
 # canvas_lines
-canvas_lines: false
+canvas_lines: true
 
 # canvas_sphere
 canvas_sphere: false
