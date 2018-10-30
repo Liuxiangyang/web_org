@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: the blog of Endless Dreams
+title: Endless Dreams
 subtitle:
-description:
+description: "个人站，主要用于分享自己在前端所学，涉及涉及，进阶，优化，工具"
 keywords:
 author: Endless Dreams
 language: zh-Hans
