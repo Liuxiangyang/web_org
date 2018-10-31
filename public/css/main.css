@@ -2143,7 +2143,11 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
+<<<<<<< HEAD
   background: #42c2d4;
+=======
+  background: #1454f2;
+>>>>>>> aae8d72552242c214485e6d428c10b1c87bfb18a
 }
 .links-of-blogroll {
   font-size: 13px;
