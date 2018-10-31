@@ -253,7 +253,7 @@ post_wordcount:
 # Reward
 #reward_comment: Donate comment here
 wechatpay: /images/wechatpay.JPG
-alipay: /images/alipay.JPG
+#alipay: /images/alipay.JPG
 #bitcoin: /images/bitcoin.png
 
 # Declare license on posts
